@@ -19,10 +19,9 @@ window.addEventListener("DOMContentLoaded", ()=> {
             setTimeout(() => {
                 elGroups.classList.remove("loading");
                 elGroups.classList.add(`${groups[random]}`);
+
                 alert.innerHTML = `🎉 Tabriklaymiz ${elInput.value} siz ${groups[random]}ga qabul qilindingiz!!! 🎉`;
             }, 5000);
-
-            elInput.value = "";
         } else {
             elInput.classList.add("error")
             setTimeout(() => {
