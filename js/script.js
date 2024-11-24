@@ -3,7 +3,8 @@ window.addEventListener("DOMContentLoaded", ()=> {
     const elFormLink = document.querySelector(".form__link"),
         elInput = document.querySelector(".form__input"),
         elGroups = document.querySelector(".groups"),
-        alert = document.querySelector(".message");
+        alert = document.querySelector(".message"),
+        elRegister = document.querySelector(".register");
 
 
     const groups = ["gryffindor","hufflepuff","ravenclaw","slytherin"];
@@ -12,6 +13,7 @@ window.addEventListener("DOMContentLoaded", ()=> {
     elFormLink.addEventListener("click", (e)=> {
         if(elInput.value) {
             elGroups.style.display = "flex";
+            elRegister.style.display = "none";
             elGroups.classList.add("loading");
             alert.innerHTML = `${elInput.value} siz ... ✨`;
             setTimeout(() => {
